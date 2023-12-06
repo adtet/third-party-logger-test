@@ -5,6 +5,6 @@ import * as OrderValidator from "../validations/order"
 
 const router = express.Router();
 
-router.post("/",OrderValidator.createValidation(),OrderController.postLogging)
+router.post("/",OrderController.postLogging)
 
 export default router;

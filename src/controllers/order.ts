@@ -28,17 +28,17 @@ export async function postLogging(req:Request,res:Response,next:any){
           });
         }
 
-        const remark = req.body.remark
-        const data = req.body.data
+        // const remark = req.body.remark
+        // const data = req.body.data
 
-        const data_post = {
-            remark:remark,
-            data:data,
-        }
+        // const data_post = {
+        //     remark:remark,
+        //     data:data,
+        // }
 
         logFormat.message = "Success post order";
         logFormat.status = 200;
-        logFormat.data = data_post;
+        logFormat.data = req.body;
 
         const data_log = JSON.stringify(logFormat);
 
